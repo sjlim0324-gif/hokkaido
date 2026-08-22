@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1F3446">
+<title>홋카이도 가족여행 · 2026.09.04–09.08</title>
+<meta name="description" content="2026년 9월 홋카이도 가족여행 일정표">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root{
+    --fs:1;
+    --sans:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif;
+    --paper:#EEF1EC;
+    --card:#FFFFFF;
+    --ink:#17211F;
+    --ink-soft:#3D4B45;
+    --muted:#77857D;
+    --line:#D8DED7;
+    --rail:#2F4858;
+    --now:#6E5AA6;
+    --now-soft:#EDE8F6;
+    --gold:#A8781F;
+    --cash:#B5451B;
+    --map:#1A6B4F;
+    --d1:#A8781F;
+    --d2:#2F4858;
+    --d3:#6E5AA6;
+    --d4:#3F6B4A;
+    --d5:#2C6E8F;
+    --shadow:0 1px 2px rgba(23,33,31,.06),0 8px 24px rgba(23,33,31,.06);
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper);color:var(--ink);
+    font-family:var(--sans);font-variant-numeric:tabular-nums;
+    font-size:calc(16px * var(--fs));line-height:1.55;
+    -webkit-font-smoothing:antialiased;padding-bottom:56px;
+  }
+  .wrap{max-width:560px;margin:0 auto}
+
+  /* ---------- hero ---------- */
+  header{position:relative;overflow:hidden;color:#fff;padding:0}
+  .hero-art{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero-scrim{
+    position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(18,32,44,.30) 0%,rgba(18,32,44,.42) 42%,rgba(18,32,44,.86) 100%);
+  }
+  .hero-in{position:relative;padding:78px 20px 18px}
+  .eyebrow{
+    font:700 calc(11px * var(--fs))/1 var(--sans);
+    letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(255,255,255,.78);margin-bottom:10px;
+    text-shadow:0 1px 6px rgba(0,0,0,.4);
+  }
+  h1{
+    margin:0;font-size:calc(27px * var(--fs));font-weight:800;letter-spacing:-.025em;
+    text-shadow:0 2px 12px rgba(0,0,0,.45);
+  }
+  .range{
+    font-size:calc(14px * var(--fs));font-weight:500;
+    color:rgba(255,255,255,.84);margin-top:5px;letter-spacing:.01em;
+    text-shadow:0 1px 8px rgba(0,0,0,.4);
+  }
+  .clock{
+    display:flex;align-items:baseline;gap:9px;margin-top:16px;
+    padding-top:14px;border-top:1px solid rgba(255,255,255,.22);
+  }
+  .clock b{font-size:calc(23px * var(--fs));font-weight:600;letter-spacing:.01em}
+  .clock span{font-size:calc(12px * var(--fs));color:rgba(255,255,255,.72)}
+  .clock .dot{
+    width:7px;height:7px;border-radius:50%;background:#8FE3B0;
+    align-self:center;animation:blip 2.4s ease-in-out infinite;flex:0 0 auto;
+  }
+  @keyframes blip{0%,100%{opacity:1}50%{opacity:.28}}
+
+  .fsbar{
+    display:flex;align-items:center;gap:8px;
+    margin-top:13px;padding-top:12px;border-top:1px solid rgba(255,255,255,.22);
+  }
+  .fsbar .lbl{font-size:calc(11.5px * var(--fs));color:rgba(255,255,255,.74);letter-spacing:.03em}
+  .fsgrp{display:flex;gap:5px;margin-left:auto}
+  .fsbtn{
+    font-family:var(--sans);font-weight:700;color:#fff;
+    background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.34);
+    border-radius:9px;padding:5px 12px;cursor:pointer;line-height:1.3;
+    transition:transform .12s ease;backdrop-filter:blur(4px);
+  }
+  .fsbtn:active{transform:scale(.94)}
+  .fsbtn[aria-pressed="true"]{background:#fff;color:var(--rail);border-color:#fff}
+  .fsbtn:focus-visible{outline:2px solid #fff;outline-offset:2px}
+  .fsbtn.s1{font-size:13px}.fsbtn.s2{font-size:16px}.fsbtn.s3{font-size:19px}
+
+  /* ---------- tabs ---------- */
+  .tabs{
+    position:sticky;top:0;z-index:20;
+    background:rgba(238,241,236,.94);
+    backdrop-filter:saturate(180%) blur(12px);
+    -webkit-backdrop-filter:saturate(180%) blur(12px);
+    border-bottom:1px solid var(--line);
+    display:flex;gap:7px;overflow-x:auto;padding:10px 14px;scrollbar-width:none;
+  }
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{
+    flex:0 0 auto;border:1px solid var(--line);background:var(--card);
+    border-radius:11px;padding:7px 13px 8px;cursor:pointer;
+    font-family:var(--sans);color:var(--ink-soft);text-align:left;
+    transition:transform .12s ease;position:relative;
+  }
+  .tab:active{transform:scale(.96)}
+  .tab .n{display:block;font-size:calc(16px * var(--fs));font-weight:700;line-height:1.05;letter-spacing:-.01em}
+  .tab .d{display:block;font-size:calc(10.5px * var(--fs));color:var(--muted);margin-top:3px;white-space:nowrap}
+  .tab[aria-selected="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+  .tab[aria-selected="true"] .d{color:rgba(255,255,255,.66)}
+  .tab.today::after{
+    content:"";position:absolute;top:-3px;right:-3px;width:9px;height:9px;
+    border-radius:50%;background:var(--now);border:2px solid var(--paper);
+  }
+  .tab:focus-visible{outline:2px solid var(--now);outline-offset:2px}
+
+  /* ---------- day head ---------- */
+  .dayhead{padding:20px 20px 4px}
+  .dayhead .num{
+    font-size:calc(11.5px * var(--fs));letter-spacing:.2em;text-transform:uppercase;
+    color:var(--accent);font-weight:800;
+  }
+  .dayhead h2{margin:5px 0 0;font-size:calc(21px * var(--fs));font-weight:800;letter-spacing:-.015em}
+  .dayhead .sub{color:var(--muted);font-size:calc(13.5px * var(--fs));margin-top:5px}
+  .stay{
+    display:flex;gap:9px;align-items:flex-start;margin:14px 0 0;padding:11px 13px;
+    background:var(--card);border:1px solid var(--line);
+    border-left:3px solid var(--accent);border-radius:10px;
+    font-size:calc(13px * var(--fs));box-shadow:var(--shadow);
+  }
+  .stay .k{color:var(--muted);flex:0 0 auto;font-size:calc(11.5px * var(--fs));padding-top:1px;letter-spacing:.04em}
+  .stay .v{color:var(--ink-soft);line-height:1.45}
+  .stay .v b{color:var(--ink);font-weight:700}
+
+  /* ---------- timeline ---------- */
+  .tl{position:relative;padding:16px 20px 8px;margin:0;list-style:none}
+  .tl::before{content:"";position:absolute;left:33px;top:24px;bottom:26px;width:2px;background:var(--line)}
+  .it{position:relative;padding:0 0 4px 40px;margin-bottom:14px}
+  .mk{
+    position:absolute;left:7px;top:5px;width:14px;height:14px;border-radius:50%;
+    background:var(--card);border:2.5px solid var(--line);z-index:2;
+  }
+  .it.move .mk{border-color:var(--rail);background:var(--rail)}
+  .it.meal .mk{border-color:var(--gold)}
+  .it.stayin .mk{border-color:var(--accent);background:var(--accent)}
+  .time{font-size:calc(13.5px * var(--fs));letter-spacing:.01em;color:var(--rail);font-weight:600}
+  .it .ttl{font-size:calc(16px * var(--fs));font-weight:700;margin-top:1px;letter-spacing:-.01em}
+  .it .desc{font-size:calc(13.5px * var(--fs));color:var(--ink-soft);margin-top:3px;line-height:1.5}
+  .it .note{font-size:calc(12.5px * var(--fs));color:var(--muted);margin-top:4px;line-height:1.5}
+  .via{
+    display:inline-block;font-size:calc(12px * var(--fs));color:var(--rail);
+    background:#E7ECE9;border-radius:6px;padding:2px 7px;margin-top:5px;font-weight:600;
+  }
+
+  /* ---------- map links ---------- */
+  .maps{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+  .mp{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:calc(13px * var(--fs));font-weight:600;font-family:var(--sans);
+    color:var(--map);text-decoration:none;
+    background:#E9F4EE;border:1px solid #C3E0D0;border-radius:9px;
+    padding:6px 11px 6px 9px;min-height:34px;
+    transition:transform .12s ease,background .12s;
+  }
+  .mp:active{transform:scale(.96);background:#D9EDE2}
+  .mp svg{flex:0 0 auto;width:14px;height:14px}
+  .mp .arw{opacity:.5;font-size:calc(11px * var(--fs));margin-left:1px}
+  .mp:focus-visible{outline:2px solid var(--map);outline-offset:2px}
+
+  .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .tg{font-size:calc(11px * var(--fs));font-weight:700;padding:3px 8px;border-radius:999px;border:1px solid}
+  .tg.cash{color:var(--cash);border-color:#F0CFC2;background:#FBEEE8}
+  .tg.card{color:var(--rail);border-color:#CFDAD5;background:#EDF2EF}
+  .tg.ic{color:#2C6E8F;border-color:#C6DCE7;background:#EAF3F7}
+  .tg.qr{color:#5C4A8C;border-color:#D6CDEB;background:#F0ECF9}
+  .tg.won{color:var(--gold);border-color:#E8D6AE;background:#FAF3E2}
+  .tg.warn{color:#8A2B12;border-color:#EFC9BC;background:#FBE9E3}
+
+  /* ---------- now ---------- */
+  .it.past{opacity:.42}
+  .it.now{
+    background:var(--now-soft);border:1px solid #DCD2F0;border-radius:13px;
+    padding:12px 14px 12px 40px;margin-left:-2px;
+    box-shadow:0 4px 18px rgba(110,90,166,.13);
+  }
+  .it.now .mk{
+    left:9px;top:16px;border-color:var(--now);background:var(--now);
+    animation:ring 2.2s ease-out infinite;
+  }
+  @keyframes ring{
+    0%{box-shadow:0 0 0 0 rgba(110,90,166,.4)}
+    70%{box-shadow:0 0 0 13px rgba(110,90,166,0)}
+    100%{box-shadow:0 0 0 0 rgba(110,90,166,0)}
+  }
+  .nowtag{
+    display:inline-block;font-size:calc(10.5px * var(--fs));font-weight:800;letter-spacing:.12em;
+    color:#fff;background:var(--now);border-radius:5px;padding:2.5px 7px;margin-bottom:5px;
+  }
+  .it.now .time{color:var(--now);font-weight:700}
+  .banner{
+    margin:0 20px 4px;padding:11px 14px;border-radius:11px;
+    background:var(--card);border:1px dashed var(--line);
+    font-size:calc(13px * var(--fs));color:var(--muted);text-align:center;
+  }
+
+  /* ---------- reference ---------- */
+  details.ref{
+    margin:18px 20px 0;background:var(--card);border:1px solid var(--line);
+    border-radius:13px;box-shadow:var(--shadow);overflow:hidden;
+  }
+  details.ref summary{
+    cursor:pointer;list-style:none;padding:14px 16px;
+    font-size:calc(14.5px * var(--fs));font-weight:700;
+    display:flex;justify-content:space-between;align-items:center;
+  }
+  details.ref summary::-webkit-details-marker{display:none}
+  details.ref summary::after{content:"＋";color:var(--muted);font-weight:400;font-size:calc(17px * var(--fs))}
+  details.ref[open] summary::after{content:"－"}
+  details.ref .body{padding:13px 16px 15px;border-top:1px solid var(--line)}
+  .row{display:flex;gap:11px;padding:8px 0;border-bottom:1px solid #EDF0EC;font-size:calc(13px * var(--fs))}
+  .row:last-child{border-bottom:0}
+  .row .k{flex:0 0 74px;color:var(--muted);font-size:calc(12px * var(--fs));letter-spacing:.02em}
+  .row .v{flex:1;color:var(--ink-soft);line-height:1.5}
+  .row .v b{color:var(--ink)}
+  .addr{font-size:calc(12px * var(--fs));color:var(--muted);word-break:keep-all;margin-top:2px}
+
+  footer{text-align:center;color:var(--muted);font-size:calc(11.5px * var(--fs));padding:26px 20px 12px;line-height:1.7}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <svg class="hero-art" viewBox="0 0 800 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#4E9FD1"/>
+        <stop offset="55%" stop-color="#8FCBE6"/>
+        <stop offset="100%" stop-color="#D6EAF0"/>
+      </linearGradient>
+      <linearGradient id="lav" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#8E76B8"/>
+        <stop offset="100%" stop-color="#5F4A8C"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="76%" cy="17%" r="26%">
+        <stop offset="0%" stop-color="#FFF6DC" stop-opacity=".95"/>
+        <stop offset="100%" stop-color="#FFF6DC" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <rect width="800" height="420" fill="url(#sky)"/>
+    <rect width="800" height="420" fill="url(#sun)"/>
+
+    <!-- summer clouds -->
+    <g fill="#FFFFFF" opacity=".82">
+      <ellipse cx="150" cy="72" rx="54" ry="21"/><ellipse cx="196" cy="66" rx="38" ry="25"/>
+      <ellipse cx="108" cy="80" rx="34" ry="15"/>
+      <ellipse cx="612" cy="52" rx="46" ry="17"/><ellipse cx="654" cy="48" rx="32" ry="21"/>
+      <ellipse cx="430" cy="95" rx="40" ry="13" opacity=".7"/>
+    </g>
+
+    <!-- Daisetsuzan ridgeline -->
+    <path d="M0 196 L78 152 L128 176 L196 128 L262 172 L318 146 L392 186 L452 158 L530 192 L596 164 L668 196 L740 170 L800 194 L800 240 L0 240 Z" fill="#7C99AE" opacity=".85"/>
+    <path d="M196 128 L222 146 L170 146 Z M452 158 L472 172 L432 172 Z" fill="#EAF3F7" opacity=".7"/>
+
+    <!-- rolling Biei hills -->
+    <path d="M0 232 C120 204 210 246 330 232 C450 218 540 250 660 234 C720 226 770 236 800 230 L800 300 L0 300 Z" fill="#6E9A6B"/>
+    <path d="M0 262 C110 240 220 274 340 260 C470 245 560 276 680 262 C740 255 780 264 800 260 L800 330 L0 330 Z" fill="#87B073"/>
+    <!-- patchwork crop stripes -->
+    <g opacity=".55">
+      <path d="M0 276 C130 256 250 286 400 272 C550 258 660 284 800 272 L800 286 C660 298 550 272 400 286 C250 300 130 270 0 290 Z" fill="#C9D98A"/>
+      <path d="M0 296 C140 278 260 306 410 292 C560 278 670 302 800 292 L800 304 C670 314 560 290 410 304 C260 318 140 290 0 310 Z" fill="#E3DCA2"/>
+    </g>
+
+    <!-- lone tree on a hill (Biei) -->
+    <g transform="translate(648,236)">
+      <rect x="-2.5" y="-6" width="5" height="20" fill="#5A4632"/>
+      <ellipse cx="0" cy="-16" rx="17" ry="20" fill="#3F6B4A"/>
+      <ellipse cx="-6" cy="-22" rx="11" ry="12" fill="#4E7C57"/>
+    </g>
+
+    <!-- lavender field rows, converging to the horizon -->
+    <path d="M0 316 C160 300 300 326 460 314 C600 303 700 320 800 312 L800 420 L0 420 Z" fill="#6E5AA6"/>
+    <g stroke="url(#lav)" stroke-linecap="round" fill="none">
+      <path d="M-40 420 C60 372 130 344 214 320" stroke-width="15" opacity=".9"/>
+      <path d="M92 420 C176 374 236 346 306 322" stroke-width="15" opacity=".82"/>
+      <path d="M232 420 C300 376 348 348 404 324" stroke-width="15" opacity=".9"/>
+      <path d="M378 420 C428 378 462 350 504 322" stroke-width="15" opacity=".82"/>
+      <path d="M524 420 C556 378 578 352 606 320" stroke-width="15" opacity=".9"/>
+      <path d="M672 420 C688 380 700 354 712 318" stroke-width="15" opacity=".82"/>
+      <path d="M820 420 C812 380 806 352 800 316" stroke-width="15" opacity=".9"/>
+    </g>
+    <g stroke="#B9A3DC" stroke-linecap="round" fill="none" opacity=".55">
+      <path d="M-10 418 C78 374 142 348 220 324" stroke-width="4"/>
+      <path d="M280 418 C338 378 380 352 428 326" stroke-width="4"/>
+      <path d="M576 418 C600 380 616 354 636 322" stroke-width="4"/>
+    </g>
+  </svg>
+  <div class="hero-scrim"></div>
+
+  <div class="hero-in">
+    <div class="eyebrow">Hokkaido · Family Trip</div>
+    <h1>홋카이도 가족여행</h1>
+    <div class="range">2026. 09. 04 (금) — 09. 08 (화) · 4박 5일</div>
+    <div class="clock"><span class="dot"></span><b id="clk">--:--</b><span id="clkday">일본 현지 시각</span></div>
+    <div class="fsbar">
+      <span class="lbl">글자 크기</span>
+      <div class="fsgrp" role="group" aria-label="글자 크기 조절">
+        <button class="fsbtn s1" data-fs="1" aria-pressed="true" aria-label="보통 크기">가</button>
+        <button class="fsbtn s2" data-fs="1.18" aria-pressed="false" aria-label="크게">가</button>
+        <button class="fsbtn s3" data-fs="1.38" aria-pressed="false" aria-label="아주 크게">가</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" id="tabs" role="tablist" aria-label="여행 일자"></nav>
+<main id="stage"></main>
+
+<footer>
+  장소 이름을 누르면 구글 지도가 열려요.<br>
+  현재 시각에 해당하는 일정은 보라색으로 표시됩니다.
+</footer>
+</div>
+
+<script>
+/* ---------- 장소 → 구글 지도 링크 ---------- */
+const M = {
+  "미나미치토세역":"https://maps.app.goo.gl/xMh3d7U8fse8qYW69",
+  "노보리베츠역":"https://maps.app.goo.gl/CmEi2rKFXpBikbDV7",
+  "다이이치 타키모토칸":"https://maps.app.goo.gl/dqyGoUDed5jaCS2u5",
+  "이세쿠라":"https://maps.app.goo.gl/8RvK1vAivxRT2o7cA",
+  "온센 이치바":"https://maps.app.goo.gl/uhpcpfPYxMEjoDK26",
+  "삿포로역":"https://maps.app.goo.gl/vN8oWWn1BjutJ6QHA",
+  "아사히카와역":"https://maps.app.goo.gl/jZmyg4Kh9eju58ov7",
+  "아마넥 아사히카와":"https://maps.app.goo.gl/MtaM1EbPLYp2eeX77",
+  "지유켄":"https://maps.app.goo.gl/msTZFEuVazUMU7ZC6",
+  "Yakitori Hachome":"https://maps.app.goo.gl/if4SDamMfi6Usbs96",
+  "이온몰":"https://maps.app.goo.gl/9HM8UtQ569xCKi867",
+  "오토코야마 주조 자료관":"https://maps.app.goo.gl/fpN6NRaDYKHPVVMQA",
+  "에비스 스시":"https://maps.app.goo.gl/yaF5WHNzuHTjC8HY9",
+  "라멘야 텐킨":"https://maps.app.goo.gl/mHktfCptVxCNtkrSA",
+  "바이코켄":"https://maps.app.goo.gl/XhxHMjCJdkFJVsRr9",
+  "41 Pieces 삿포로":"https://maps.app.goo.gl/PzxCp6cfWWRE3wvM6",
+  "라젠트 스테이 오도리":"https://maps.app.goo.gl/hMRpdAZqEuGbuHvEA",
+  "징기스칸 다이코쿠야":"https://maps.app.goo.gl/tFHpBnLjkT1bR46e9",
+  "라멘 신겐":"https://maps.app.goo.gl/3emZX3zobHwgm3kT7",
+  "회전스시 칸타로":"https://maps.app.goo.gl/PjVptvRiqJEVZ3Ej6"
+};
+
+const DAYS = [
+{
+  n:1, date:"09.04", dow:"금", key:"2026-09-04", accent:"var(--d1)",
+  title:"인천 → 신치토세 → 노보리베츠",
+  sub:"비행기로 홋카이도 입성, 온천 료칸에서 첫날 밤",
+  stayName:"노보리베츠 다이이치 타키모토칸",
+  stayNote:"체크인 14~19시 · 체크아웃 10시",
+  items:[
+    {t:"06:01",te:"07:20",type:"move",ttl:"공항리무진 6017",desc:"보라매공원 → 인천공항 제2터미널",note:"1시간 20분 소요 · 성인 3명 탑승 시 1명 무료",tags:[["won","17,000원"]]},
+    {t:"09:15",ttl:"항공 체크인 마감",desc:"OZ174는 09:15까지, KE765는 09:35까지 체크인 완료",note:"탑승구 도착 : OZ 10:00 / KE 10:20 · 여권과 E-티켓 준비",tags:[["warn","시간 엄수"]]},
+    {t:"10:15",te:"13:00",type:"move",ttl:"OZ174 아시아나",desc:"인천 T2 → 신치토세공항",note:"엄마 · 아빠 · 성진 / 2시간 45분",via:"위탁 ~23kg · 기내 ~10kg"},
+    {t:"10:35",te:"13:25",type:"move",ttl:"KE765 대한항공",desc:"인천 T2 → 신치토세공항",note:"현진 · 하은 / 2시간 50분",via:"위탁 ~23kg · 기내 ~10kg"},
+    {t:"13:30",ttl:"공항 도착 후 준비",desc:"유심 수령 · 환전 · 교통카드 충전",note:"유심 수령 : 1층 입국장 3번 출구 (06~22시) · 엔화 20,000엔 환전 · 교통카드 인당 3,000엔 충전"},
+    {t:"14:00",te:"14:05",type:"move",ttl:"쾌속 에어포트",desc:"신치토세공항역 → 미나미치토세역",note:"5분 · 5명 합계 ¥1,230",places:["미나미치토세역"],tags:[["ic","교통카드"]]},
+    {t:"15:17",te:"15:59",type:"move",ttl:"Hokuto 16 특급",desc:"미나미치토세역 → 노보리베츠역",note:"42분 · 전석 지정석",places:["미나미치토세역","노보리베츠역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"16:25",te:"16:41",type:"move",ttl:"도난버스 ND",desc:"노보리베츠역 → 다이이치 타키모토칸",note:"20분 · 5명 합계 ¥2,250",places:["노보리베츠역","다이이치 타키모토칸"],tags:[["cash","현금 결제"]]},
+    {t:"16:45",type:"stayin",ttl:"료칸 체크인",desc:"노보리베츠 다이이치 타키모토칸",note:"3인실(아고다) · 2인실(여기어때) 각각 예약",places:["다이이치 타키모토칸"]},
+    {t:"18:00",type:"meal",ttl:"저녁 식사",desc:"이세쿠라 (숯불구이) 또는 온센 이치바 (해산물)",note:"이세쿠라 18:00~01:00 · 온센 이치바 11:30~20:00 / 예상 ¥15,000",places:["이세쿠라","온센 이치바"],tags:[["card","카드 가능"]]},
+    {t:"20:30",ttl:"온천 & 휴식",desc:"내일 아침거리는 인근 편의점에서 미리 구매",note:"예상 ¥2,500",tags:[["card","카드 가능"]]}
+  ]
+},
+{
+  n:2, date:"09.05", dow:"토", key:"2026-09-05", accent:"var(--d2)",
+  title:"노보리베츠 → 삿포로 → 아사히카와",
+  sub:"기차 두 번 갈아타고 북상, 저녁은 아사히카와 맛집",
+  stayName:"아마넥 호텔 아사히카와",
+  stayNote:"체크인 15~24시 · 체크아웃 11시 · 2박",
+  items:[
+    {t:"08:00",type:"meal",ttl:"아침 식사",desc:"어제 사둔 편의점 음식"},
+    {t:"09:03",te:"09:30",type:"move",ttl:"도난버스 NA",desc:"타키모토칸 → 노보리베츠역",note:"20분 · 5명 합계 ¥2,250 · 체크아웃 10시 전 출발",places:["다이이치 타키모토칸","노보리베츠역"],tags:[["cash","현금 결제"]]},
+    {t:"10:15",te:"11:29",type:"move",ttl:"Hokuto 3 특급",desc:"노보리베츠역 → 삿포로역",note:"1시간 15분",places:["노보리베츠역","삿포로역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"11:40",type:"meal",ttl:"점심 식사",desc:"삿포로역에서 에키벤 (역 도시락)",note:"환승 대기 약 1시간 30분 / 예상 ¥2,500",places:["삿포로역"],tags:[["card","카드 가능"]]},
+    {t:"13:00",te:"14:25",type:"move",ttl:"Kamui 19 특급",desc:"삿포로역 → 아사히카와역",note:"1시간 25분",places:["삿포로역","아사히카와역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"14:40",type:"stayin",ttl:"호텔 체크인",desc:"아마넥 호텔 아사히카와",note:"역에서 도보 이동 · 체크인 15시부터",places:["아마넥 아사히카와"]},
+    {t:"15:00",te:"17:00",ttl:"숙소 휴식",desc:"이동이 길었던 날, 저녁 전까지 여유"},
+    {t:"17:30",type:"meal",ttl:"저녁 식사 · 지유켄",desc:"숙소에서 도보 10분",note:"영업 17:00~20:30 / 예상 ¥7,500",places:["지유켄"],tags:[["card","카드 가능"]]},
+    {t:"19:30",type:"meal",ttl:"야식 · 야키토리",desc:"Yakitori Hachome",note:"예상 ¥10,000",places:["Yakitori Hachome"],tags:[["card","카드 가능"]]},
+    {t:"21:00",ttl:"이온몰 장보기",desc:"야식 & 내일 아침거리 구매",note:"영업 08:00~22:00",places:["이온몰"]}
+  ]
+},
+{
+  n:3, date:"09.06", dow:"일", key:"2026-09-06", accent:"var(--d3)",
+  title:"비에이 · 후라노 택시 투어",
+  sub:"이번 여행의 하이라이트, 6시간 전세 택시 투어",
+  stayName:"아마넥 호텔 아사히카와",
+  stayNote:"연박 · 짐 그대로 두고 출발",
+  items:[
+    {t:"07:00",type:"meal",ttl:"아침 식사",desc:"어제 이온몰에서 산 음식"},
+    {t:"07:45",ttl:"집결 · 아사히카와역 동쪽 개찰구",desc:"기사님이 'LIM SUNGJIN' 이름표를 들고 대기",note:"8시 정각 출발이니 늦지 않게",places:["아사히카와역"],tags:[["warn","시간 엄수"]]},
+    {t:"08:00",te:"14:00",type:"move",ttl:"후라노 · 비에이 택시 투어",desc:"오쿠야마택시 · 알파드 (5인승)",note:"팜 도미타와 사계채의 언덕 우선, 나머지는 현장에서 유연하게 / ¥48,000",tags:[["card","현장 카드 결제"]]},
+    {t:"14:00",te:"15:00",ttl:"오토코야마 주조 자료관",desc:"사케 양조장 견학 & 시음 · 투어 종료 장소",places:["오토코야마 주조 자료관"]},
+    {t:"15:00",te:"15:30",type:"move",ttl:"81번 버스",desc:"나가야마2조6초메 → 1조8초메",note:"5명 합계 ¥1,650 · 숙소 방향",places:["아마넥 아사히카와"],tags:[["ic","교통카드"]]},
+    {t:"15:40",ttl:"카페 또는 숙소 휴식",desc:"저녁 식사 전 자유 시간"},
+    {t:"17:30",type:"meal",ttl:"저녁 식사 · 에비스 스시",desc:"숙소에서 도보 20분",note:"영업 16:30~21:00 / 예상 ¥12,500 · 현금만 가능할 수 있어 확인 필요",places:["에비스 스시"],tags:[["cash","현금 확인"]]},
+    {t:"20:00",ttl:"이온몰 장보기",desc:"야식 & 내일 아침거리",note:"예상 ¥5,000",places:["이온몰"],tags:[["card","카드 가능"]]},
+    {t:"21:00",type:"meal",ttl:"여유 있으면 라멘 한 그릇",desc:"라멘야 텐킨 또는 바이코켄",note:"영업 11:00~20:30 / 예상 ¥2,000",places:["라멘야 텐킨","바이코켄"],tags:[["card","카드 가능"]]}
+  ]
+},
+{
+  n:4, date:"09.07", dow:"월", key:"2026-09-07", accent:"var(--d4)",
+  title:"아사히카와 → 삿포로",
+  sub:"오전에 이동, 오후는 자유 시간, 저녁은 다 함께 징기스칸",
+  stayName:"41 Pieces 삿포로 & 라젠트 스테이 삿포로 오도리",
+  stayNote:"체크인 15~24시 · 체크아웃 11시",
+  items:[
+    {t:"08:30",type:"meal",ttl:"아침 식사",desc:"이온몰에서 산 음식 · 체크아웃 11시",places:["아마넥 아사히카와"]},
+    {t:"10:00",te:"11:25",type:"move",ttl:"Lilac 14 특급",desc:"아사히카와역 → 삿포로역",note:"1시간 25분",places:["아사히카와역","삿포로역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"11:40",ttl:"숙소에 짐 맡기기",desc:"체크인 전 캐리어만 먼저 맡기고 출발",places:["41 Pieces 삿포로","라젠트 스테이 오도리"]},
+    {t:"12:00",te:"17:00",ttl:"자유 시간",desc:"점심 식사 & 각자 일정",note:"엄마 · 아빠 · 성진 / 현진 · 하은 두 팀으로 나눠 이동",via:"17:30 저녁 장소에서 다시 집합"},
+    {t:"17:30",type:"meal",ttl:"저녁 · 징기스칸 다이코쿠야",desc:"아사히카와 징기스칸 다이코쿠야 삿포로 1호점",note:"구글 예약 완료 / 예상 ¥20,000 · 5명 전원 집합",places:["징기스칸 다이코쿠야"],tags:[["card","카드 가능"],["warn","예약 있음"]]},
+    {t:"19:30",type:"stayin",ttl:"숙소 체크인",desc:"41 Pieces 삿포로 & 라젠트 스테이 오도리",note:"두 숙소 모두 오도리 지역, 도보 거리",places:["41 Pieces 삿포로","라젠트 스테이 오도리"]},
+    {t:"21:00",ttl:"야식 & 내일 아침 구매",desc:"라멘 신겐도 선택지",note:"라멘 신겐 11:00~01:00 · 현금만 / 예상 ¥5,000",places:["라멘 신겐"],tags:[["cash","현금 결제"]]}
+  ]
+},
+{
+  n:5, date:"09.08", dow:"화", key:"2026-09-08", accent:"var(--d5)",
+  title:"삿포로 → 신치토세공항 → 인천",
+  sub:"공항에서 마지막 스시 한 판 먹고 귀국",
+  stayName:"— 귀국일",
+  stayNote:"체크아웃 11시 · 짐 정리 잊지 않기",
+  items:[
+    {t:"08:30",type:"meal",ttl:"아침 식사",desc:"편의점 음식 · 짐 정리"},
+    {t:"09:40",ttl:"체크아웃",desc:"두고 온 물건 없는지 마지막 확인",note:"충전기 · 여권 · 보조배터리",tags:[["warn","소지품 확인"]]},
+    {t:"10:00",te:"11:00",type:"move",ttl:"쾌속 에어포트",desc:"숙소 → (도보) 삿포로역 → 신치토세공항",note:"약 1시간 · 5명 합계 ¥11,150",places:["삿포로역"],tags:[["ic","교통카드"]]},
+    {t:"11:00",te:"12:00",type:"meal",ttl:"점심 · 회전스시 칸타로",desc:"하코다테 고메 회전스시 칸타로 신치토세공항점",note:"영업 11:00~20:30 / 예상 ¥15,000",places:["회전스시 칸타로"],tags:[["card","카드 가능"]]},
+    {t:"12:15",ttl:"면세 쇼핑 & 체크인",desc:"OZ173은 13:30까지, KE766은 13:50까지 체크인",note:"탑승구 도착 : OZ 14:15 / KE 14:35",tags:[["warn","시간 엄수"]]},
+    {t:"14:30",te:"17:45",type:"move",ttl:"OZ173 아시아나",desc:"신치토세공항 → 인천 T2",note:"엄마 · 아빠 · 성진 / 3시간 15분"},
+    {t:"14:50",te:"17:55",type:"move",ttl:"KE766 대한항공",desc:"신치토세공항 → 인천 T2",note:"현진 · 하은 / 3시간 5분"},
+    {t:"18:24",te:"19:24",type:"move",ttl:"공항버스 6017",desc:"인천공항 T2 → 보라매공원",note:"1시간"},
+    {t:"18:40",te:"20:40",type:"move",ttl:"공항버스 40번",desc:"인천공항 T2 → 광교중앙역 → 기숙사",note:"2시간 · 지하 1층 40번 승차장"},
+    {t:"18:50",te:"20:30",type:"move",ttl:"공항버스",desc:"인천공항 T2 → 동탄 (라마다호텔)",note:"1시간 30분"}
+  ]
+}
+];
+
+const REF = [
+  {q:"숙소 (누르면 지도)", rows:[
+    ["9/4","MAP:다이이치 타키모토칸<div class='addr'>55 Noboribetsu-onsen, Noboribetsuonsencho, Noboribetsu, Hokkaido 059-0595</div>"],
+    ["9/5–9/6","MAP:아마넥 아사히카와<div class='addr'>1-8-218 Asahikawa, Hokkaido 070-0031</div>"],
+    ["9/7","MAP:41 Pieces 삿포로<div class='addr'>Minami 2 Jonishi 5-chome 29-2, Odori, Sapporo 060-0062</div>"],
+    ["9/7","MAP:라젠트 스테이 오도리<div class='addr'>5-26-5 Minami 2 Jonishi, Odori, Chuo-ku, Sapporo 060-0062</div>"]
+  ]},
+  {q:"항공편", rows:[
+    ["9/4 출발","<b>OZ174</b> 10:15–13:00 · 엄마, 아빠, 성진<br><b>KE765</b> 10:35–13:25 · 현진, 하은"],
+    ["9/8 귀국","<b>OZ173</b> 14:30–17:45 · 엄마, 아빠, 성진<br><b>KE766</b> 14:50–17:55 · 현진, 하은"],
+    ["수하물","위탁 ~23kg · 기내 ~10kg"]
+  ]},
+  {q:"기차편 (전석 지정석)", rows:[
+    ["9/4","<b>Hokuto 16</b> 15:17–15:59<div class='addr'>미나미치토세 → 노보리베츠</div>"],
+    ["9/5","<b>Hokuto 3</b> 10:15–11:29<div class='addr'>노보리베츠 → 삿포로</div>"],
+    ["9/5","<b>Kamui 19</b> 13:00–14:25<div class='addr'>삿포로 → 아사히카와</div>"],
+    ["9/7","<b>Lilac 14</b> 10:00–11:25<div class='addr'>아사히카와 → 삿포로</div>"],
+    ["발권","네 편 모두 <b>현장에서 QR코드로 승차권 발급</b>"]
+  ]},
+  {q:"현금이 꼭 필요한 곳", rows:[
+    ["도난버스","9/4 노보리베츠역→료칸, 9/5 료칸→역<div class='addr'>각 5명 ¥2,250 · 카드 불가</div>"],
+    ["에비스 스시","9/6 저녁 · 현금 결제만 가능할 수 있어 확인 필요"],
+    ["라멘 신겐","9/7 야식 · 현금 결제"],
+    ["환전","9/4 공항 도착 후 <b>¥20,000</b> 환전 · 교통카드 인당 ¥3,000 충전"]
+  ]},
+  {q:"챙길 것", rows:[
+    ["필수","여권 · E-티켓 · 여행자보험 확인서(출력)"],
+    ["카드","트래블월렛 · 트래블로그 · 교통카드"],
+    ["유심","현진, 하은 : 인천공항 T2 1층 3번 출구에서 수령 (06~22시)<div class='addr'>엄마, 아빠, 성진 : e-SIM 미리 설치</div>"],
+    ["기타","충전기 · 보조배터리 · 상비약 · 우산"]
+  ]}
+];
+
+const PIN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>';
+
+const mins = s => { const [h,m] = s.split(":").map(Number); return h*60+m; };
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const mapLink = name => M[name]
+  ? `<a class="mp" href="${M[name]}" target="_blank" rel="noopener noreferrer">${PIN}<span>${esc(name)}</span><span class="arw">↗</span></a>`
+  : `<span class="mp" style="opacity:.6">${PIN}<span>${esc(name)}</span></span>`;
+
+function jstNow(){
+  const p = new Intl.DateTimeFormat("en-CA",{
+    timeZone:"Asia/Tokyo",year:"numeric",month:"2-digit",day:"2-digit",
+    hour:"2-digit",minute:"2-digit",hour12:false
+  }).formatToParts(new Date()).reduce((a,x)=>(a[x.type]=x.value,a),{});
+  return { date:`${p.year}-${p.month}-${p.day}`, h:+p.hour%24, m:+p.minute };
+}
+
+function effective(items){
+  let last = 0;
+  return items.map(it => { if(it.t) last = mins(it.t); return last; });
+}
+
+let active = 0;
+
+function render(){
+  const now = jstNow(), d = DAYS[active];
+  const isToday = d.key === now.date;
+  const nowM = now.h*60 + now.m;
+  const eff = effective(d.items);
+
+  let curIdx = -1;
+  if(isToday){
+    for(let i=0;i<eff.length;i++) if(eff[i] <= nowM) curIdx = i;
+    if(nowM < eff[0]) curIdx = -1;
+  }
+
+  let h = `<section class="dayhead" style="--accent:${d.accent}">
+    <div class="num">Day ${d.n} · ${d.date} (${d.dow})</div>
+    <h2>${esc(d.title)}</h2>
+    <div class="sub">${esc(d.sub)}</div>
+    <div class="stay"><span class="k">숙소</span><span class="v"><b>${esc(d.stayName)}</b><br>${esc(d.stayNote)}</span></div>
+  </section>`;
+
+  if(isToday && curIdx === -1) h += `<div class="banner">오늘 일정이 아직 시작 전이에요 · 첫 일정 ${d.items[0].t}</div>`;
+  else if(!isToday) h += `<div class="banner">오늘(${now.date.slice(5).replace("-",".")})이 아닌 다른 날짜를 보고 있어요</div>`;
+
+  h += `<ul class="tl" style="--accent:${d.accent}">`;
+  d.items.forEach((it,i)=>{
+    const cls = ["it",it.type||"",isToday&&i<curIdx?"past":"",i===curIdx?"now":""].filter(Boolean).join(" ");
+    const tstr = it.t ? (it.te ? `${it.t} – ${it.te}` : it.t) : "";
+    h += `<li class="${cls}"><span class="mk"></span>`;
+    if(i===curIdx) h += `<span class="nowtag">지금</span><br>`;
+    if(tstr) h += `<div class="time">${tstr}</div>`;
+    h += `<div class="ttl">${esc(it.ttl)}</div>`;
+    if(it.desc) h += `<div class="desc">${esc(it.desc)}</div>`;
+    if(it.via) h += `<div class="via">${esc(it.via)}</div>`;
+    if(it.note) h += `<div class="note">${esc(it.note)}</div>`;
+    if(it.places && it.places.length) h += `<div class="maps">${it.places.map(mapLink).join("")}</div>`;
+    if(it.tags && it.tags.length) h += `<div class="tags">${it.tags.map(t=>`<span class="tg ${t[0]}">${esc(t[1])}</span>`).join("")}</div>`;
+    h += `</li>`;
+  });
+  h += `</ul>`;
+
+  h += REF.map(r=>`<details class="ref"><summary>${esc(r.q)}</summary><div class="body">` +
+      r.rows.map(x=>{
+        let v = x[1];
+        if(v.startsWith("MAP:")){
+          const rest = v.slice(4), cut = rest.indexOf("<div");
+          const nm = cut < 0 ? rest : rest.slice(0,cut);
+          v = `<div class="maps" style="margin-top:0">${mapLink(nm)}</div>` + (cut<0?"":rest.slice(cut));
+        }
+        return `<div class="row"><span class="k">${esc(x[0])}</span><span class="v">${v}</span></div>`;
+      }).join("") + `</div></details>`).join("");
+
+  document.getElementById("stage").innerHTML = h;
+  document.querySelectorAll(".tab").forEach((b,i)=>b.setAttribute("aria-selected", i===active));
+}
+
+function buildTabs(){
+  const now = jstNow();
+  document.getElementById("tabs").innerHTML = DAYS.map((d,i)=>
+    `<button class="tab${d.key===now.date?" today":""}" role="tab" aria-selected="false" data-i="${i}">
+      <span class="n">Day ${d.n}</span><span class="d">${d.date} ${d.dow}</span>
+    </button>`).join("");
+  document.querySelectorAll(".tab").forEach(b=>{
+    b.addEventListener("click",()=>{ active=+b.dataset.i; render(); window.scrollTo({top:0,behavior:"smooth"}); });
+  });
+}
+
+function tick(){
+  const n = jstNow();
+  document.getElementById("clk").textContent =
+    String(n.h).padStart(2,"0")+":"+String(n.m).padStart(2,"0");
+  const d = DAYS.find(x=>x.key===n.date);
+  document.getElementById("clkday").textContent = d ? `일본 현지 시각 · Day ${d.n}` : "일본 현지 시각";
+}
+
+function setFS(v, save){
+  document.documentElement.style.setProperty("--fs", v);
+  document.querySelectorAll(".fsbtn").forEach(b=>
+    b.setAttribute("aria-pressed", String(b.dataset.fs)===String(v)));
+  if(save){ try{ localStorage.setItem("hok-fs", v); }catch(e){} }
+}
+document.querySelectorAll(".fsbtn").forEach(b=>
+  b.addEventListener("click",()=>setFS(b.dataset.fs,true)));
+(function(){ let v="1"; try{ v = localStorage.getItem("hok-fs")||"1"; }catch(e){} setFS(v,false); })();
+
+(function init(){
+  const today = jstNow().date;
+  const i = DAYS.findIndex(d=>d.key===today);
+  active = i>=0 ? i : 0;
+  buildTabs(); tick(); render();
+  setInterval(()=>{ tick(); render(); }, 30000);
+})();
+</script>
+</body>
+</html>
