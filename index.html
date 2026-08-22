@@ -175,6 +175,39 @@
   .mp .arw{opacity:.5;font-size:calc(11px * var(--fs));margin-left:1px}
   .mp:focus-visible{outline:2px solid var(--map);outline-offset:2px}
 
+  /* ---------- ticket / seats ---------- */
+  details.tk{
+    margin-top:8px;background:#F4F7F5;border:1px solid #CFDAD5;
+    border-radius:11px;overflow:hidden;
+  }
+  details.tk summary{
+    cursor:pointer;list-style:none;padding:9px 12px;
+    font-size:calc(13px * var(--fs));font-weight:700;color:var(--rail);
+    display:flex;align-items:center;gap:6px;
+  }
+  details.tk summary::-webkit-details-marker{display:none}
+  details.tk summary::after{content:"▾";margin-left:auto;opacity:.55;font-weight:400}
+  details.tk[open] summary::after{content:"▴"}
+  details.tk .tkbody{padding:2px 12px 12px;border-top:1px solid #E1E8E4}
+  .tkline{
+    display:flex;gap:10px;padding:7px 0;border-bottom:1px solid #E7EDE9;
+    font-size:calc(12.5px * var(--fs));
+  }
+  .tkline:last-child{border-bottom:0}
+  .tkline .k{flex:0 0 58px;color:var(--muted);font-size:calc(11.5px * var(--fs))}
+  .tkline .v{flex:1;color:var(--ink-soft)}
+  .tkline .v b{color:var(--ink);font-weight:700}
+  .seats{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+  .seat{
+    font-size:calc(13px * var(--fs));font-weight:700;color:var(--rail);
+    background:#fff;border:1.5px solid #BCCDC5;border-radius:8px;
+    padding:5px 9px;letter-spacing:.01em;
+  }
+  .carbadge{
+    display:inline-block;font-size:calc(12px * var(--fs));font-weight:800;
+    color:#fff;background:var(--rail);border-radius:7px;padding:4px 10px;margin-top:2px;
+  }
+
   .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
   .tg{font-size:calc(11px * var(--fs));font-weight:700;padding:3px 8px;border-radius:999px;border:1px solid}
   .tg.cash{color:var(--cash);border-color:#F0CFC2;background:#FBEEE8}
@@ -371,7 +404,7 @@ const DAYS = [
     {t:"10:35",te:"13:25",type:"move",ttl:"KE765 대한항공",desc:"인천 T2 → 신치토세공항",note:"현진 · 하은 / 2시간 50분",via:"위탁 ~23kg · 기내 ~10kg"},
     {t:"13:30",ttl:"공항 도착 후 준비",desc:"유심 수령 · 환전 · 교통카드 충전",note:"유심 수령 : 1층 입국장 3번 출구 (06~22시) · 엔화 20,000엔 환전 · 교통카드 인당 3,000엔 충전"},
     {t:"14:00",te:"14:05",type:"move",ttl:"쾌속 에어포트",desc:"신치토세공항역 → 미나미치토세역",note:"5분 · 5명 합계 ¥1,230",places:["미나미치토세역"],tags:[["ic","교통카드"]]},
-    {t:"15:17",te:"15:59",type:"move",ttl:"Hokuto 16 특급",desc:"미나미치토세역 → 노보리베츠역",note:"42분 · 전석 지정석",places:["미나미치토세역","노보리베츠역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"15:17",te:"15:59",type:"move",ttl:"Hokuto 16 특급",desc:"미나미치토세역 → 노보리베츠역",note:"42분 · 전석 지정석",places:["미나미치토세역","노보리베츠역"],tags:[["qr","QR 승차권 발급"]],ticket:{res:"E50145",car:"5호차",seats:["3-C","4-A","4-B","4-C","4-D"],fare:"¥16,350",note:"3-C 한 자리만 앞줄로 떨어져 있어요"}},
     {t:"16:25",te:"16:41",type:"move",ttl:"도난버스 ND",desc:"노보리베츠역 → 다이이치 타키모토칸",note:"20분 · 5명 합계 ¥2,250",places:["노보리베츠역","다이이치 타키모토칸"],tags:[["cash","현금 결제"]]},
     {t:"16:45",type:"stayin",ttl:"료칸 체크인",desc:"노보리베츠 다이이치 타키모토칸",note:"3인실(아고다) · 2인실(여기어때) 각각 예약",places:["다이이치 타키모토칸"]},
     {t:"18:00",type:"meal",ttl:"저녁 식사",desc:"이세쿠라 (숯불구이) 또는 온센 이치바 (해산물)",note:"이세쿠라 18:00~01:00 · 온센 이치바 11:30~20:00 / 예상 ¥15,000",places:["이세쿠라","온센 이치바"],tags:[["card","카드 가능"]]},
@@ -387,9 +420,9 @@ const DAYS = [
   items:[
     {t:"08:00",type:"meal",ttl:"아침 식사",desc:"어제 사둔 편의점 음식"},
     {t:"09:03",te:"09:30",type:"move",ttl:"도난버스 NA",desc:"타키모토칸 → 노보리베츠역",note:"20분 · 5명 합계 ¥2,250 · 체크아웃 10시 전 출발",places:["다이이치 타키모토칸","노보리베츠역"],tags:[["cash","현금 결제"]]},
-    {t:"10:15",te:"11:29",type:"move",ttl:"Hokuto 3 특급",desc:"노보리베츠역 → 삿포로역",note:"1시간 15분",places:["노보리베츠역","삿포로역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"10:15",te:"11:29",type:"move",ttl:"Hokuto 3 특급",desc:"노보리베츠역 → 삿포로역",note:"1시간 15분",places:["노보리베츠역","삿포로역"],tags:[["qr","QR 승차권 발급"]],ticket:{res:"E38160",car:"3호차",seats:["6-C","6-D","7-A","7-B","7-C"],fare:"¥24,450"}},
     {t:"11:40",type:"meal",ttl:"점심 식사",desc:"삿포로역에서 에키벤 (역 도시락)",note:"환승 대기 약 1시간 30분 / 예상 ¥2,500",places:["삿포로역"],tags:[["card","카드 가능"]]},
-    {t:"13:00",te:"14:25",type:"move",ttl:"Kamui 19 특급",desc:"삿포로역 → 아사히카와역",note:"1시간 25분",places:["삿포로역","아사히카와역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"13:00",te:"14:25",type:"move",ttl:"Kamui 19 특급",desc:"삿포로역 → 아사히카와역",note:"1시간 25분",places:["삿포로역","아사히카와역"],tags:[["qr","QR 승차권 발급"]],ticket:{res:"E88726",car:"2호차",seats:["6-A","6-B","6-C","6-D","7-C"],fare:"¥27,200"}},
     {t:"14:40",type:"stayin",ttl:"호텔 체크인",desc:"아마넥 호텔 아사히카와",note:"역에서 도보 이동 · 체크인 15시부터",places:["아마넥 아사히카와"]},
     {t:"15:00",te:"17:00",ttl:"숙소 휴식",desc:"이동이 길었던 날, 저녁 전까지 여유"},
     {t:"17:30",type:"meal",ttl:"저녁 식사 · 지유켄",desc:"숙소에서 도보 10분",note:"영업 17:00~20:30 / 예상 ¥7,500",places:["지유켄"],tags:[["card","카드 가능"]]},
@@ -423,7 +456,7 @@ const DAYS = [
   stayNote:"체크인 15~24시 · 체크아웃 11시",
   items:[
     {t:"08:30",type:"meal",ttl:"아침 식사",desc:"이온몰에서 산 음식 · 체크아웃 11시",places:["아마넥 아사히카와"]},
-    {t:"10:00",te:"11:25",type:"move",ttl:"Lilac 14 특급",desc:"아사히카와역 → 삿포로역",note:"1시간 25분",places:["아사히카와역","삿포로역"],tags:[["qr","QR 승차권 발급"]]},
+    {t:"10:00",te:"11:25",type:"move",ttl:"Lilac 14 특급",desc:"아사히카와역 → 삿포로역",note:"1시간 25분",places:["아사히카와역","삿포로역"],tags:[["qr","QR 승차권 발급"]],ticket:{res:"E16527",car:"3호차",seats:["9-A","9-B","9-C","9-D","10-B"],fare:"¥27,200"}},
     {t:"11:40",ttl:"숙소에 짐 맡기기",desc:"체크인 전 캐리어만 먼저 맡기고 출발",places:["41 Pieces 삿포로","라젠트 스테이 오도리"]},
     {t:"12:00",te:"17:00",ttl:"자유 시간",desc:"점심 식사 & 각자 일정",note:"엄마 · 아빠 · 성진 / 현진 · 하은 두 팀으로 나눠 이동",via:"17:30 저녁 장소에서 다시 집합"},
     {t:"17:30",type:"meal",ttl:"저녁 · 징기스칸 다이코쿠야",desc:"아사히카와 징기스칸 다이코쿠야 삿포로 1호점",note:"구글 예약 완료 / 예상 ¥20,000 · 5명 전원 집합",places:["징기스칸 다이코쿠야"],tags:[["card","카드 가능"],["warn","예약 있음"]]},
@@ -464,12 +497,13 @@ const REF = [
     ["9/8 귀국","<b>OZ173</b> 14:30–17:45 · 엄마, 아빠, 성진<br><b>KE766</b> 14:50–17:55 · 현진, 하은"],
     ["수하물","위탁 ~23kg · 기내 ~10kg"]
   ]},
-  {q:"기차편 (전석 지정석)", rows:[
-    ["9/4","<b>Hokuto 16</b> 15:17–15:59<div class='addr'>미나미치토세 → 노보리베츠</div>"],
-    ["9/5","<b>Hokuto 3</b> 10:15–11:29<div class='addr'>노보리베츠 → 삿포로</div>"],
-    ["9/5","<b>Kamui 19</b> 13:00–14:25<div class='addr'>삿포로 → 아사히카와</div>"],
-    ["9/7","<b>Lilac 14</b> 10:00–11:25<div class='addr'>아사히카와 → 삿포로</div>"],
-    ["발권","네 편 모두 <b>현장에서 QR코드로 승차권 발급</b>"]
+  {q:"기차편 · 좌석", rows:[
+    ["9/4","<b>Hokuto 16</b> 15:17–15:59 · 예약 E50145<div class='addr'>미나미치토세 → 노보리베츠 · <b>5호차</b> 3-C, 4-A, 4-B, 4-C, 4-D</div>"],
+    ["9/5","<b>Hokuto 3</b> 10:15–11:29 · 예약 E38160<div class='addr'>노보리베츠 → 삿포로 · <b>3호차</b> 6-C, 6-D, 7-A, 7-B, 7-C</div>"],
+    ["9/5","<b>Kamui 19</b> 13:00–14:25 · 예약 E88726<div class='addr'>삿포로 → 아사히카와 · <b>2호차</b> 6-A, 6-B, 6-C, 6-D, 7-C</div>"],
+    ["9/7","<b>Lilac 14</b> 10:00–11:25 · 예약 E16527<div class='addr'>아사히카와 → 삿포로 · <b>3호차</b> 9-A, 9-B, 9-C, 9-D, 10-B</div>"],
+    ["발권","네 편 모두 승차일 당일까지 <b>역에서 QR코드로 승차권 수령</b><div class='addr'>QR코드와 발권코드는 Gmail 예약 메일에 있어요</div>"],
+    ["주의","특급권만으로는 탈 수 없어요. <b>기본운임용 IC카드</b>를 꼭 함께 준비하세요</div>"]
   ]},
   {q:"현금이 꼭 필요한 곳", rows:[
     ["도난버스","9/4 노보리베츠역→료칸, 9/5 료칸→역<div class='addr'>각 5명 ¥2,250 · 카드 불가</div>"],
@@ -543,6 +577,16 @@ function render(){
     if(it.note) h += `<div class="note">${esc(it.note)}</div>`;
     if(it.places && it.places.length) h += `<div class="maps">${it.places.map(mapLink).join("")}</div>`;
     if(it.tags && it.tags.length) h += `<div class="tags">${it.tags.map(t=>`<span class="tg ${t[0]}">${esc(t[1])}</span>`).join("")}</div>`;
+    if(it.ticket){
+      const k = it.ticket;
+      h += `<details class="tk"><summary>🎫 좌석 정보 보기</summary><div class="tkbody">
+        <div class="tkline"><span class="k">호차</span><span class="v"><span class="carbadge">${esc(k.car)}</span></span></div>
+        <div class="tkline"><span class="k">좌석</span><span class="v"><div class="seats">${k.seats.map(x=>`<span class="seat">${esc(x)}</span>`).join("")}</div></span></div>
+        <div class="tkline"><span class="k">예약번호</span><span class="v"><b>${esc(k.res)}</b> · 어른 5명 · ${esc(k.fare)}</span></div>
+        ${k.note?`<div class="tkline"><span class="k">참고</span><span class="v">${esc(k.note)}</span></div>`:""}
+        <div class="tkline"><span class="k">발권</span><span class="v">QR코드·발권코드는 <b>Gmail 예약 메일</b>에서 확인하세요</span></div>
+      </div></details>`;
+    }
     h += `</li>`;
   });
   h += `</ul>`;
